@@ -25,6 +25,11 @@ body {
     cursor: pointer;
 }
 
+.imge{
+
+    margin-left: 280px;
+}
+
 a,
 a:hover {
     color: black;

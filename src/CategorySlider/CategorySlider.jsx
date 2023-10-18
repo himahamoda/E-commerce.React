@@ -23,7 +23,7 @@ export default function CategorySlider() {
     return <>
 <div className="py-3">
 {data?.data.data? <Slider {...settings}>
-    {data?.data.data.map((Category)=> <img height={200} key={Category.id} src={Category.image} className='w-100'/> )}
+    {data?.data.data.map((Category)=> <img height={200} key={Category} src={Category.image} className='w-100'/> )}
     
     </Slider>:''}
 </div>

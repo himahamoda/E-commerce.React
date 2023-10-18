@@ -8,32 +8,6 @@ import toast from 'react-hot-toast'
 
 
 export default function Featurd() {
-    // let { AddtoWish } = useContext(WishList)
-
-    // async function AddCart(id) {
-    //     let { data } = await AddtoCart(id)
-    //     console.log(data);
-    //     if (data.status == 'success') {
-    //         toast.success(data.message, {
-
-    //             duration: 2000,
-    //             position: 'top-right',
-    //         })
-
-    //     }
-    // }
-    // async function Addwish(id) {
-    //     let { data } = await AddtoWish(id)
-    //     console.log(data);
-    //     if (data.status == 'success') {
-    //         toast.success(data.message, {
-
-    //             duration: 2000,
-    //             position: 'top-right',
-    //         })
-
-    //     }
-    // }
 
     function getfeaturdProduct() {
 
@@ -74,10 +48,11 @@ export default function Featurd() {
                 <div className="row">
                     {data?.data.data.map((product) => <div key={product.id} className="col-md-3 gy-2">
 
-                       
+                       <Link to={`/ProductsDetails/${product.id}`}>
                             <div className="product cursor-pointer py-3 px-2">
                                 <img src={product.imageCover} className="w-100" alt={product.title} />
-                                <h2 className='font-sm text-main fw-bold'>{product.category.name}</h2>
+                                    {/* <h2 className='font-sm text-main fw-bold'>{product.category.name}</h2> */}
+                                {/* <h2 className='font-sm text-main fw-bold'>{product.brand.name}</h2> */}
                                 <h2 className='h5 fw-bold'>{product.title}</h2>
                                 <div className="d-flex justify-content-between mt-3">
                                     <span>{product.price}EGP</span>
@@ -89,10 +64,12 @@ export default function Featurd() {
                               
                             </div>
 
-
+                            </Link>
                     </div>)}
                 </div>
+                
             </div>
+            
         )
 
         }

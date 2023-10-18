@@ -4,16 +4,16 @@ import style from '../Login/Login.module.css'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { InfinitySpin } from 'react-loader-spinner'
-import  { UserContext } from '../../Context/UserContext'
+import { UserContext } from '../../Context/UserContext'
 
 
 export default function Login() {
   let navigate = useNavigate()
   const [error, setError] = useState(null)
   const [lodaing, setlodaing] = useState(false)
-  let {setUserToken} = useContext(UserContext)
+  let { setUserToken } = useContext(UserContext)
 
 
 
@@ -22,15 +22,15 @@ export default function Login() {
     let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signin`, values)
       .catch(
         (err) => {
-        setError(err.response.data.message)
-        setlodaing(false)
-      }
+          setError(err.response.data.message)
+          setlodaing(false)
+        }
       )
 
     if (data.message === 'success') {
-      
+
       setlodaing(false);
-      localStorage.setItem('userToken' , data.token)
+      localStorage.setItem('userToken', data.token)
       setUserToken(data.token)
       navigate('/')
     }
@@ -63,13 +63,16 @@ export default function Login() {
         <input onChange={formik.handleChange} value={formik.values.password} onBlur={formik.handleBlur} className=' form-control mb-2' type="password" id="password" name='password' />
         {formik.errors.password && formik.touched.password ? <div className="alert alert-danger py-2">{formik.errors.password} </div> : ''}
 
-        {!lodaing ? <button disabled={!(formik.isValid && formik.dirty)} type='submit' className='btn bg-danger'>login</button>
-          : <button type='button' className='btn bg-danger text-light'>
+        {!lodaing ? <button disabled={!(formik.isValid && formik.dirty)} type='submit' className='btn bg-main text-white'>login</button>
+          : <button type='button' className='btn bg-main text-center'>
             <InfinitySpin
               width='50'
               color='white'
               className="align-content-center "
             /></button>}
+        <Link to={'/forgetpassword'}> <button type='submit' className='border-0 fw-bold ms-3 bg-body text-main m-2'>Forget password</button></Link>
+
+
 
 
       </form>

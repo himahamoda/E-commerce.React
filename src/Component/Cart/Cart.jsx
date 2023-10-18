@@ -50,8 +50,8 @@ useEffect(()=>{
    />
 </div> :<div className=" bg-main-light p-4">
     <h2>shop cart</h2>
-    <h2 className='h6 text-main fw-bold'>Total price:{cartITems.data.totalCartPrice} </h2>
-    <h2 className='h6 text-main fw-bold'>Total items:{cartITems.numOfCartItems} </h2>
+    <h2 className='h6 text-main fw-bold '>Total price:{cartITems.data.totalCartPrice} </h2>
+    {/* <h2 className='h6 text-main fw-bold'>Total items:{cartITems.numOfCartItems} </h2> */}
 
 
 {cartITems.data.products.map((products)=> 
@@ -59,7 +59,7 @@ useEffect(()=>{
   <div className="col-md-1">
     <img src={products.product.imageCover} className='w-100' alt="" />
   </div>
-  <div className="col-md-11 d-flex justify-content-between">
+  <div className="col-md-11 d-flex justify-content-between"> 
 
  <div>
   <h3 className='h6 fw-bold'>title{products.product.title.split(' ').slice(0.7).join(' ')}</h3>
@@ -76,7 +76,7 @@ useEffect(()=>{
 </div>
 
 )}
-<Link to={`/checkout/${cartITems.data._id}`} >
+<Link to={`/checkout/${cartITems._id}`} >
 <button className='btn bg-main text-white'>checkout</button>
 
 </Link>
