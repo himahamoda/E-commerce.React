@@ -55,7 +55,7 @@ useEffect(()=>{
 
 
 {cartITems.data.products.map((products)=> 
-<div key={products.id} className="row border-bottom py-4">
+<div key={products} className="row border-bottom py-4">
   <div className="col-md-1">
     <img src={products.product.imageCover} className='w-100' alt="" />
   </div>
@@ -76,7 +76,7 @@ useEffect(()=>{
 </div>
 
 )}
-<Link to={`/checkout/${cartITems._id}`} >
+<Link to={`/checkout/${cartITems.data._id}`} >
 <button className='btn bg-main text-white'>checkout</button>
 
 </Link>

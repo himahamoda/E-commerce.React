@@ -40,8 +40,7 @@ export default function App() {
         { path: 'checkout/:id', element: <CheckOut /> },
         { path: 'register', element: <Register /> },
         { path: '*', element: <Notfound /> },
-
-      ]
+              ]
     }
   ])
 

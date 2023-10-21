@@ -31,17 +31,18 @@ export default function CheckOut() {
       <form onSubmit={formik.handleSubmit}>
 
         <label htmlFor="details ">Adress</label>
-        <input onChange={formik.handleChange} value={formik.values.details} class="form-control form-control-lg mt-2 mb-3 " type="text" placeholder="your Adrees" aria-label=".form-control-lg example" />
-       
+        <input id='ttt' class="form-control form-control-lg mt-2 mb-3 " type="text" placeholder="your Adrees" aria-label=".form-control-lg example" value={formik.values.details}/>     
+           
+
         <label htmlFor="details">Phone</label>
-        <input onChange={formik.handleChange} value={formik.values.phone} class="form-control form-control-lg mt-2 mb-3" type="tel" placeholder="tel" aria-label=".form-control-lg example" />
+        <input id='phone' onChange={formik.handleChange} value={formik.values.phone} class="form-control form-control-lg mt-2 mb-3" type="tel" placeholder="tel" aria-label=".form-control-lg example" />
         
         <label htmlFor="details">City</label>
-        <input onChange={formik.handleChange} value={formik.values.city} class="form-control form-control-lg mt-2 mb-3" type="text" placeholder="city" aria-label=".form-control-lg example" />
+        <input id='city' onChange={formik.handleChange} value={formik.values.city} class="form-control form-control-lg mt-2 mb-3" type="text" placeholder="city" aria-label=".form-control-lg example" />
 
-        <button  className='btn bg-main text-white w-100'>Pay</button>
-      </form>
-
+        <button type='submit' className='btn bg-main text-white w-100'>Pay</button>
+        </form>
     </div>
-  )
-}
+    )}
+
+
