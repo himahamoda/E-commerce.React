@@ -27,19 +27,19 @@ export default function App() {
   let routers = createBrowserRouter([
     {
       path: '', element: <Layout />, children: [
-        { index: true, element: <Protected><Home /></Protected> },
+        { path:'React-Project', element: <Protected><Home /></Protected> },
         { path: 'Cart', element: <Protected><Cart /></Protected> },
         { path: 'wishlist', element: <Protected><Wishlist /> </Protected> },
         { path: 'products', element: <Protected><Products /></Protected> },
         { path: 'categories', element: <Protected><Categories /> </Protected> },
         { path: 'brands', element: <Protected> <Brands /></Protected> },
         { path: 'productsdetails/:id', element: <Protected> <ProductsDetails /></Protected> },
-        { path: 'React-Project/', element: <Login /> },
+        { path: 'login', element: <Login /> },
         { path: 'forgetpassword', element: <ForgetPass/> },
         { path: 'restCode', element: <ResetCode/> },
         { path: 'checkout/:id', element: <CheckOut /> },
         { path: 'register', element: <Register /> },
-        // { path: '*', element: <Notfound /> },
+        { path: '*', element: <Notfound /> },
               ]
     }
   ])
