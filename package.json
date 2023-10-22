@@ -1,6 +1,4 @@
-{
-   "homepage": "https://himahamoda.github.io/React-Project",
-   "name": "app-e",
+{   "name": "app-e",
    "version": "0.1.0",
    "private": true,
    "dependencies": {
