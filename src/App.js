@@ -34,7 +34,7 @@ export default function App() {
         { path: 'categories', element: <Protected><Categories /> </Protected> },
         { path: 'brands', element: <Protected> <Brands /></Protected> },
         { path: 'productsdetails/:id', element: <Protected> <ProductsDetails /></Protected> },
-        { path: 'React-Project', element: <Login /> },
+        { path: 'React-Project/', element: <Login /> },
         { path: 'forgetpassword', element: <ForgetPass/> },
         { path: 'restCode', element: <ResetCode/> },
         { path: 'checkout/:id', element: <CheckOut /> },
