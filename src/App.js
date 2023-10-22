@@ -39,7 +39,7 @@ export default function App() {
         { path: 'restCode', element: <ResetCode/> },
         { path: 'checkout/:id', element: <CheckOut /> },
         { path: 'register', element: <Register /> },
-        { path: '*', element: <Notfound /> },
+        // { path: '*', element: <Notfound /> },
               ]
     }
   ])
