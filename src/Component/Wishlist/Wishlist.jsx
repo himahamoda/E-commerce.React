@@ -57,7 +57,7 @@ export default function Wishlist() {
               <div className="col-md-11 d-flex justify-content-between">
 
                 <div>
-                  <h3 className='h6 fw-bold'>title{product.description}</h3>
+                  <h3 className='h6 fw-bold'> Title : {product.description.split(' ').slice(0.6).join(' ')}</h3>
                   <h3 className='h6 text-main '>price : {product.price}EGP</h3>
                   <button onClick={() => removeItem(product.id)} className='btn p-0'> <i className='fas fa-trash-can text-main'></i> Remove</button>
                 </div>

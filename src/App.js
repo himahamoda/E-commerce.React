@@ -27,7 +27,7 @@ export default function App() {
   let routers = createBrowserRouter([
     {
       path: '', element: <Layout />, children: [
-        { path:'React-Project', element: <Protected><Home /></Protected> },
+        { index:true , element: <Protected><Home /></Protected> },
         { path: 'Cart', element: <Protected><Cart /></Protected> },
         { path: 'wishlist', element: <Protected><Wishlist /> </Protected> },
         { path: 'products', element: <Protected><Products /></Protected> },

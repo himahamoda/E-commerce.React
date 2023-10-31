@@ -53,7 +53,7 @@ export default function Featurd() {
                                 <img src={product.imageCover} className="w-100" alt={product.title} />
                                     {/* <h2 className='font-sm text-main fw-bold'>{product.category.name}</h2> */}
                                 {/* <h2 className='font-sm text-main fw-bold'>{product.brand.name}</h2> */}
-                                <h2 className='h5 fw-bold'>{product.title}</h2>
+                                <h2 className='h6 text-main '>{product.title}</h2>
                                 <div className="d-flex justify-content-between mt-3">
                                     <span>{product.price}EGP</span>
                                     <span><i className='fas fa-star rating-color'></i>{product.ratingsAverage}</span>

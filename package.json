@@ -1,4 +1,6 @@
-{   "name": "app-e",
+{   
+"homepage": "https://himahamoda.github.io/login",  
+"name": "app-e",
    "version": "0.1.0",
    "private": true,
    "dependencies": {

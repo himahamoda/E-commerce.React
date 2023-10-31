@@ -61,7 +61,7 @@ export default function Featurd() {
     let { data, isLoading, isFetched, isError } = useQuery('featuredProduct',
         getfeaturdProduct, {
         // cacheTime:3000,
-        // refetchOnMount:fals, 
+        // refetchOnMount:false, 
         // staleTime:3000 
 
     }
@@ -90,7 +90,7 @@ export default function Featurd() {
         ) : (
             <div className="container py-2">
                 <div className="row">
-                    {data?.data.data.map((product) => <div key={product.id} className="col-md-3 gy-2">
+                    {data?.data.data.map((product) => <div key={product.Id} className="col-md-3 gy-2">
 
                         <Link to={`/ProductsDetails/${product.id}`}>
                             <div className="product cursor-pointer py-3 px-2">

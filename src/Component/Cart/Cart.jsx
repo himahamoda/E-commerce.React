@@ -62,7 +62,7 @@ useEffect(()=>{
   <div className="col-md-11 d-flex justify-content-between"> 
 
  <div>
-  <h3 className='h6 fw-bold'>title{products.product.title.split(' ').slice(0.7).join(' ')}</h3>
+  <h3 className='h6 '>{products.product.title.split(' ').slice(0.7).join(' ')}</h3>
   <h3 className='h6 text-main '>price : {products.price}EGP</h3>
   <button onClick={()=>removeItem(products.product.id)} className='btn p-0'> <i className='fas fa-trash-can text-main'></i> Remove</button>
   </div>
